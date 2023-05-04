@@ -23,7 +23,7 @@ class PaletteGenerator():
         hsl_arr = hsl_arr.values.tolist()[0]
         hsl_arr = self.hsl_str_to_tup(hsl_arr)
         hsl_arr.pop(0)
-        print(hsl_arr)
+        print(f'{hsl_arr=}')
         #Starting with the input shade, create a new list of of colors copying the hsl changes from the tw_closest
         diff_list = []
         for hsl in hsl_arr:
@@ -47,6 +47,7 @@ class PaletteGenerator():
         palette = []
         for hsl in input_hsl_list:
             #Fix hsl to rgb
+            hexcode_str = ''            
             palette.append(hexcode_str)
         pprint(palette)
     
