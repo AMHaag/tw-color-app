@@ -23,8 +23,7 @@ class PaletteGenerator():
         hsl_arr = hsl_arr.values.tolist()[0]
         hsl_arr = self.hsl_str_to_tup(hsl_arr)
         hsl_arr.pop(0)
-        print(f'{hsl_arr=}')
-        #Starting with the input shade, create a new list of of colors copying the hsl changes from the tw_closest
+        #Starting with the input shade, create a new list of colors copying the hsl changes from the tw_closest
         diff_list = []
         for hsl in hsl_arr:
             diff = []
@@ -47,7 +46,7 @@ class PaletteGenerator():
         palette = []
         for hsl in input_hsl_list:
             #Fix hsl to rgb
-            hexcode_str = ''            
+            hexcode_str = self.hsl_to_rgb(hsl)
             palette.append(hexcode_str)
         pprint(palette)
     
@@ -77,7 +76,27 @@ class PaletteGenerator():
             tup = tuple(string.split('/'))
             output.append(tup)
         return output
-
+         
+    def hsl_to_rgb(self, hsl_tup):
+    #   rgb = tuple(int(color_hex[i+1:i+3],16) for i in (0,2,4))
+    #   print(f"{rgb=}")
+    #   hsl = colorsys.rgb_to_hls(*rgb)
+        hsl = hsl_tup
+        new_rgb = colorsys.hls_to_rgb(*hsl)
+        rgb = [1,2,3]
+        for i in range(3):
+            current = new_rgb[i]
+            if new_rgb[i] >255:
+                current = 255
+            current_hex = hex(round(current)).lstrip("0x")
+            if len(current_hex) <1:
+                current_hex = "00"
+            if len(current_hex) < 2:
+                current_hex = f"0{current_hex}"
+            rgb[i] = current_hex
+        # Add left pad if len str == 0
+        hexcode = f"#{rgb[0]}{rgb[1]}{rgb[2]}"
+        return hexcode 
 if __name__ == '__main__':
     x = PaletteGenerator('#10ff22')
     print(x.findClosest())
