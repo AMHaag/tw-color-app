@@ -98,6 +98,6 @@ class PaletteGenerator():
         hexcode = f"#{rgb[0]}{rgb[1]}{rgb[2]}"
         return hexcode 
 if __name__ == '__main__':
-    x = PaletteGenerator('#10ff22')
+    x = PaletteGenerator('#17126A')
     print(x.findClosest())
     x.generatePalette()
