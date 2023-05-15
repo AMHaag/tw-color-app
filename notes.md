@@ -16,7 +16,10 @@
 
 ## Logic
  - Rewrite the algo in TS
- - Check if valid hexcode
+	- Write conversion from RGB to HSL and back
+	- Parse the TW-P csv into json
+
+- Check if valid hexcode
 	- != Display help message
  - Check if input is existing TW Color
  	- == Display Modal
