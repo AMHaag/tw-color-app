@@ -1,13 +1,13 @@
 {
-  "shade50": "#111111",
-  "shade100": "#222222",
-  "shade200": "#333333",
-  "shade300": "#444444",
-  "shade400": "#555555",
-  "shade500": "#666666",
-  "shade600": "#777777",
-  "shade700": "#888888",
-  "shade800": "#999999",
-  "shade900": "#aaaaaa",
-  "shade950": "#bbbbbb"
+  "shade50": "#fbfbfe",
+  "shade100": "#f1f2fd",
+  "shade200": "#dde1fe",
+  "shade300": "#bcc2fd",
+  "shade400": "#9196fb",
+  "shade500": "#6261f8",
+  "shade600": "#4b3ef0",
+  "shade700": "#3c2bdd",
+  "shade800": "#3224ba",
+  "shade900": "#2b2099",
+  "shade950": "#17126a"
 }

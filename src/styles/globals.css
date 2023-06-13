@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.cdnfonts.com/css/guerrilla');
 
 
 body {
 	background-color: #dde1fe;
 	font-family: 'Fira Sans', sans-serif;
 }
+
